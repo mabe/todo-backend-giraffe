@@ -10,14 +10,10 @@ type Todo =
     with
     static member Empty = { Id = -1; Url = ""; Title = "EMPTY"; Completed = false; Order = -1 }
 
-type TodoPatch() =
-    member val Title : string = null with get, set
-    member val Completed : Nullable<bool> = Nullable() with get, set
-    member val Order : Nullable<int> = Nullable() with get, set
-//type TodoPatch =
-//     { Title : string option
-//       Completed : bool option
-//       Order : int option }
+type TodoPatch =
+    { Title : string
+      Completed : bool Nullable
+      Order : int Nullable }
 
 type IContainer =
     abstract GetAll : unit -> Async<Todo[]>
