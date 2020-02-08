@@ -25,7 +25,7 @@ $ ./build.sh
 After a successful build you can start the web application by executing the following command in your terminal:
 
 ```
-dotnet run src/todo-backend-giraffe
+dotnet run -p src/todo-backend-giraffe
 ```
 
 After the application has started visit [http://localhost:5000](http://localhost:5000) in your preferred browser.
